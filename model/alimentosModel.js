@@ -5,7 +5,8 @@ const connection = mysql.createConnection({
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || '',
   database: process.env.DB_NAME || 'Comida',
-  charset: 'utf8mb4'
+  charset: 'utf8mb4',
+  timezone: 'local'
 });
 
 connection.connect((err) => {
